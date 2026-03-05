@@ -95,7 +95,7 @@ select:hover {
   align-items: center;
 }
 
-.actions button{
+.actions button {
   cursor: pointer;
 }
 .actions button,
@@ -158,4 +158,90 @@ input[type="checkbox"] {
   font-weight: 700;
   padding: 3.2rem 0;
   color: #1f2937;
+}
+
+/* Responsive for mobile devices */
+@media (max-width: 768px) {
+  html {
+    font-size: 55%; /* تصغير حجم الخط للموبايل */
+  }
+
+  .app {
+    /* padding: 1.2rem; */
+    grid-template-rows: auto auto 1fr auto;
+  }
+
+  h1 {
+    font-size: 5rem; /* تصغير العنوان */
+    word-spacing: 15px;
+    letter-spacing: -3px;
+    padding: 1.6rem 0;
+  }
+
+  .add-form {
+    flex-direction: column; /* يحول الفورم للعمودي */
+    gap: 1.2rem;
+    padding: 1.6rem 2rem;
+  }
+  .add-form input{
+    padding: 1.2rem 2rem;
+  }
+
+  h3 {
+    margin-right: 0;
+    text-align: center;
+  }
+
+  button,
+  select,
+  input {
+    width: 100%; /* ياخد عرض كامل */
+    padding: 1rem 0;
+  }
+
+  .list {
+    padding: 2rem 1rem;
+    gap: 2rem;
+  }
+
+  .list ul {
+    grid-template-columns: 1fr; /* كل عنصر في صف واحد */
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .list li {
+    flex-direction: row; /* خلي العناصر في صف (checkbox - نص - مسح) */
+    justify-content: space-between; /* checkbox على الشمال، زر المسح على اليمين */
+    align-items: center;
+    padding: 1rem 2.6rem;
+    gap: 0.8rem;
+  }
+
+  .list li button:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-right: 0.8rem;
+    padding: 0;
+  }
+
+  .list li p {
+    flex: 1;
+    margin-right: 30px; /* النص ياخد كل المساحة بين checkbox والمسح */
+  }
+  .list li button {
+    width: 10%; /* النص ياخد كل المساحة بين checkbox والمسح */
+  }
+
+  .actions button,
+  .list select {
+    font-size: 1.2rem;
+    padding: 0.6rem 1.6rem;
+    margin: 0.4rem;
+  }
+  .stats {
+    padding: 2rem 1rem;
+    font-size: 2rem;
+  }
 }

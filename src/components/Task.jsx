@@ -8,9 +8,9 @@ export default function Task({ task, onDeleteTask, onToggleTask }) {
           onChange={() => onToggleTask(task.id)}
         />
       </button>
-      <span style={task.done ? { textDecoration: "line-through" } : {}}>
+      <p style={task.done ? { textDecoration: "line-through" } : {}}>
         {task.description}{" "}
-      </span>
+      </p>
       <button onClick={() => onDeleteTask(task.id)}>✗</button>
     </li>
   );
